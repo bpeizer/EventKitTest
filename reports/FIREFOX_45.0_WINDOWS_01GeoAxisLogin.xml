@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="01GeoAxisLogin"
+    errors="0" failures="1" hostname="" id="" package="01GeoAxisLogin" skipped="0"
+    tests="1" time="35.58" timestamp="Mon, 15 Jan 2018 22:20:48 GMT">
+  
+    <testcase name="GeoAxisLogin" classname="01GeoAxisLogin" time="35.58" assertions="9">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Failed [ok]: (Path is... &quot;/exports&quot; (Path matches '/exports'))">    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:99:23)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

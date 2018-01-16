@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="04Download DataPack"
+    errors="0" failures="1" hostname="" id="" package="04Download DataPack" skipped="0"
+    tests="1" time="610.1" timestamp="Mon, 15 Jan 2018 22:39:01 GMT">
+  
+    <testcase name="DownloadDataPack" classname="04Download DataPack" time="610.1" assertions="36">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click '.qa-BreadcrumbStepper-NavigationCheck' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:200:22)
+    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:383:11)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

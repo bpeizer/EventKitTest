@@ -1,0 +1,76 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "custom_commands",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "",
+  "globals_path" : "",
+
+  "selenium" : {
+    "start_process" : false,
+    "server_path" : "",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "",
+      "webdriver.ie.driver" : ""
+    }
+  },
+
+  "test_workers" : {"enabled" : true, "workers" : "auto"},
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 80,
+      "selenium_host"  : "ondemand.saucelabs.com",
+      "silent": true,
+      "globals" : {
+        "GeoAxisUser" : "${GEOAXIS_USERNAME}",
+        "GeoAxisPass" : "${GEOAXIS_PASSWORD}"
+      },
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "username" : "${SAUCE_USERNAME}",
+      "access_key" : "${SAUCE_ACCESS_KEY}",
+
+      "skip_testcases_on_fail": false,
+
+      "desiredCapabilities": {
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+
+    "chrome": {
+      "desiredCapabilities": {
+        "platform": "Windows 10",
+        "browserName": "chrome",
+        "version": "55",
+        "idleTimeout":1000
+      }
+    },
+
+    "firefox" : {
+      "desiredCapabilities": {
+        "platform": "Windows 10",
+        "browserName": "firefox",
+        "version": "45",
+        "idleTimeout":1000
+      }
+    },
+
+    "internet_explorer_edge" : {
+      "desiredCapabilities": {
+        "platform": "Windows 10",
+        "browserName": "MicrosoftEdge",
+        "version": "latest",
+        "idleTimeout":1000
+      }
+    }
+
+  }
+}
