@@ -19,6 +19,7 @@ node {
     withCredentials([file(credentialsId: 'eventkit_postman_environment', variable: 'POSTMAN_FILE')]) {
     withCredentials([usernamePassword(credentialsId: 'eventkit_geoxis', usernameVariable: 'GEOAXIS_USERNAME', passwordVariable: 'GEOAXIS_PASSWORD')]) {
     withCredentials([usernamePassword(credentialsId: 'eventkit_saucelabs', usernameVariable: 'SAUCE_USERNAME', passwordVariable: 'SAUCE_ACCESS_KEY')]) {
+      withEnv(["PATH+=${root}/node_modules/newman/bin:${nodejs}/bin", "HOME=${root}"]) {
            sh "npm install -g newman"
            sh "npm install"
            sh '''           
@@ -27,7 +28,8 @@ node {
             '''
            sh "sh EventKit.sh" 
                }  
-              }   
+              }
+            }   
            }
          }
          

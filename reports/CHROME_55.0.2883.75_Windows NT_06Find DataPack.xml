@@ -5,12 +5,12 @@
 
   <testsuite name="06Find DataPack"
     errors="0" failures="1" hostname="" id="" package="06Find DataPack" skipped="0"
-    tests="1" time="56.01" timestamp="Mon, 15 Jan 2018 22:23:57 GMT">
+    tests="1" time="61.68" timestamp="Tue, 16 Jan 2018 21:52:28 GMT">
   
-    <testcase name="CreateDataPack" classname="06Find DataPack" time="56.01" assertions="2">
+    <testcase name="CreateDataPack" classname="06Find DataPack" time="61.68" assertions="2">
 
-      <failure message="Failed [ok]: (El text is... &quot;Selenium Test&quot;)">    at /Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:520:26
-    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:497:7)</failure>
+      <failure message="Failed [ok]: (El text is... &quot;Selenium Test&quot;)">    at /Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:520:26
+    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:497:7)</failure>
 
     
     </testcase>
