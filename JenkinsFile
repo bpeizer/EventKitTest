@@ -27,9 +27,7 @@ node {
             '''
            sh "sh EventKit.sh" 
                }  
-              }
-             }
-            }    
+              }   
            }
          }
          
