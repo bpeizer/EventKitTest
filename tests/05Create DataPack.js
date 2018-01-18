@@ -24,7 +24,7 @@ var https = require('https');
        .click(`[name=password]`, `CSS`, `Click element`)
        .changeInput(`[name=password]`, `CSS`, client.globals.GeoAxisPass, `Change input to... "client.globals.GeoAxisPass"`)
        .click(`[name=username]`, `CSS`, `Click element`)
-       .changeInput(`[name=username]`, `CSS`, client.globals.GeoAxisUser, `Change input to... "client.globals.GeoAxisUser"`)
+       .changeInput(`[name=username]`, `CSS`, 'PzTestPass16', `Change input to... "client.globals.GeoAxisUser"`)
        .click(`[name=submit]`, `CSS`, `Click element`)
        .elTextIs(`.qa-Application-Link-exports`, `CSS`, `DataPack Library`, `El text is... "DataPack Library"`)
        .elTextIs(`.qa-Application-Link-create`, `CSS`, `Create DataPack`, `El text is... "Create DataPack"`)

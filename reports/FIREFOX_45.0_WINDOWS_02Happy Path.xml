@@ -5,9 +5,9 @@
 
   <testsuite name="02Happy Path"
     errors="0" failures="1" hostname="" id="" package="02Happy Path" skipped="0"
-    tests="1" time="33.14" timestamp="Mon, 15 Jan 2018 22:21:23 GMT">
+    tests="1" time="39.21" timestamp="Tue, 16 Jan 2018 21:49:13 GMT">
   
-    <testcase name="HappyPath" classname="02Happy Path" time="33.14" assertions="9">
+    <testcase name="HappyPath" classname="02Happy Path" time="39.21" assertions="9">
 
     
 
@@ -23,8 +23,8 @@
 
     
 
-      <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click '.qa-Application-Link-create' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:200:22)
-    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventkitTesting/common/snaptest-nw-driver.js:383:11)</failure>
+      <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click '.qa-Application-Link-create' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:200:22)
+    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:383:11)</failure>
 
     
     </testcase>

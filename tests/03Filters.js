@@ -24,7 +24,7 @@ var https = require('https');
        .click(`[name=password]`, `CSS`, `Click element`)
        .changeInput(`[name=password]`, `CSS`, client.globals.GeoAxisPass, `Change input to... "client.globals.GeoAxisPass"`)
        .click(`[name=username]`, `CSS`, `Click element`)
-       .changeInput(`[name=username]`, `CSS`, client.globals.GeoAxisUser, `Change input to... "client.globals.GeoAxisUser"`)
+       .changeInput(`[name=username]`, `CSS`, 'PzTestPass16', `Change input to... "client.globals.GeoAxisUser"`)
        .click(`[name=submit]`, `CSS`, `Click element`)
        .click(`div > div > div > div:nth-of-type(2) > div > div > div > input`, `CSS`, `Click element`)
        .click(`div > div > div > div > div > button > div > div`, `CSS`, `Click element`)
