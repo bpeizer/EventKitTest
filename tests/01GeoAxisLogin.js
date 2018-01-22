@@ -35,7 +35,7 @@
 
         setTimeout(function() {
             done();
-        }, 1000);
+        }, 60000);
 
     }
  };
