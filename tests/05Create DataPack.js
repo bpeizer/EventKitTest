@@ -67,7 +67,7 @@ var https = require('https');
 
         setTimeout(function() {
             done();
-        }, 60000);
+        }, 1000);
 
     }
  };
