@@ -56,7 +56,7 @@ var https = require('https');
        .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
        .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
-       .pause(240000)
+       .refreshUntilElementVisible(".qa-ProviderRow-Check-providerStatus")
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
        .click(`div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(3) > div:nth-of-type(2) > table > tbody > tr > td:nth-of-type(2) > svg > path`, `CSS`, `Click element`)
        .switchToWindow(1, `CHANGE_WINDOW_AUTO`)

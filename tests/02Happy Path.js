@@ -45,7 +45,7 @@
        .click(`div > form > div > div:nth-of-type(8) > div > div:nth-of-type(3) > label > div > input`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(2) > div > button > div > div > svg > path`, `CSS`, `Click element`)
        .click(`div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > button > div > div`, `CSS`, `Click element`)
-       .waitForElementVisible(`div > form > div > div:nth-of-type(2) > div:nth-of-type(3) > table > tbody > tr > td:nth-of-type(2)`,`CSS`, 600000, function() {setTimeout("location.reload();",60000);})
+       .refreshUntilElementVisible(".qa-ProviderRow-Check-providerStatus")
        .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(3) > table > tbody > tr > td:nth-of-type(2)`, `CSS`, `COMPLETED`, `El text is... "COMPLETED"`)
        .elementPresent(`div > :nth-child(3) .qa-ProviderRow-Check-providerStatus`, `CSS`, `El is present`)
        .elementPresent(`div > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(4) > div > table > thead > tr > th:nth-of-type(3) > svg`, `CSS`, `El is present`)
