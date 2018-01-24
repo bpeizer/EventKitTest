@@ -58,7 +58,7 @@
       "desiredCapabilities": {
         "platform": "Windows 10",
         "browserName": "firefox",
-        "version": "45",
+        "version": "50",
         "idleTimeout":1000
       }
     },
