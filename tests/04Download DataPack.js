@@ -55,6 +55,7 @@ var https = require('https');
        .click(`div > div:nth-of-type(2) > div > button > div > div > svg`, `CSS`, `Click element`)
        .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
        .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
+       .pause(60000)
        .waitForElementPresent(`div > :nth-child(3) .qa-ProviderRow-Check-providerStatus`,120000)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
