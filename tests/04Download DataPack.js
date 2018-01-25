@@ -58,8 +58,6 @@ var https = require('https');
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
        .click(`div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(3) > div:nth-of-type(2) > table > tbody > tr > td:nth-of-type(2) > svg > path`, `CSS`, `Click element`)
-       .switchToWindow(1, `CHANGE_WINDOW_AUTO`)
-       .switchToWindow(2, `CHANGE_WINDOW_AUTO`)
        .click(`form > div > div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(3) > button > div > span`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(3) > div:nth-of-type(2) > button > div > span`, `CSS`, `Click element`)
        .end();
