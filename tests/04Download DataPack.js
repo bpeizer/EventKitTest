@@ -53,8 +53,6 @@ var https = require('https');
        .changeInput(`[name=projectName]`, `CSS`, `selenium test`, `Change input to... "selenium test"`)
        .click(`[name=makePublic]`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(2) > div > button > div > div > svg`, `CSS`, `Click element`)
-       .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
-       .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
        .pause(60000)
        .waitForElementPresent(`div > :nth-child(3) .qa-ProviderRow-Check-providerStatus`,240000)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
