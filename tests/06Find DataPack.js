@@ -50,7 +50,6 @@ var https = require('https');
        .click(`[name=makePublic]`, `CSS`, `Click element`)
        .click(`div > form > div > div:nth-of-type(8) > div > div > label > div > input`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(2) > div > button > div > div > svg`, `CSS`, `Click element`)
-       .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
        .click(`.qa-Application-Link-exports`, `CSS`, `Click element`)
        .elTextIs(`div > div > div:nth-of-type(2) > div > div > div > span > div > div > div > a`, `CSS`, `Selenium Test`, `El text is... "Selenium Test"`)
        .click(`div > div > div:nth-of-type(2) > div > div > div > span > div > div > div > a`, `CSS`, `Click element`)

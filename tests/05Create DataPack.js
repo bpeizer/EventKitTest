@@ -52,7 +52,6 @@ var https = require('https');
        .click(`div > form > div > div:nth-of-type(8) > div > div:nth-of-type(2) > label > div > input`, `CSS`, `Click element`)
        .click(`div > form > div > div:nth-of-type(8) > div > div:nth-of-type(3) > label > div > input`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(2) > div > button > div > div > svg`, `CSS`, `Click element`)
-       .click(`.qa-BreadcrumbStepper-NavigationCheck`, `CSS`, `Click element`)
        .elTextIs(`div > form > div > div:nth-of-type(2) > div > table > tbody > tr > td:nth-of-type(2)`, `CSS`, `Selenium Test GeoPackage`, `El text is... "Selenium Test GeoPackage"`)
        .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(3) > table > tbody > tr > td:nth-of-type(2)`, `CSS`, `SUBMITTED`, `El text is... "SUBMITTED"`)
        .pause(60000)
