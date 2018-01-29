@@ -54,7 +54,7 @@ var https = require('https');
        .click(`[name=makePublic]`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(2) > div > button > div > div > svg`, `CSS`, `Click element`)
        .pause(60000)
-       .waitForElementPresent(`div > :nth-child(3) .qa-ProviderRow-Check-providerStatus`,240000)
+       .waitForElementPresent(`.qa-ProviderRow-Check-providerStatus`,240000)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
        .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
        .click(`div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(3) > div:nth-of-type(2) > table > tbody > tr > td:nth-of-type(2) > svg > path`, `CSS`, `Click element`)
