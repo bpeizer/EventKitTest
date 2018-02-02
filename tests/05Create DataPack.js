@@ -58,7 +58,6 @@ var https = require('https');
        .elTextIs(`form > div > div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > button > div > span`, `CSS`, `CLONE`, `El text is... "CLONE"`)
        .click(`form > div > div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(3) > button > div > span`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(3) > div:nth-of-type(2) > button > div > span`, `CSS`, `Click element`)
-       .click(`.qa-Application-Link-logout`, `CSS`, `Click element`)
        .end();
 },
        afterEach: function(client, done) {
