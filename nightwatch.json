@@ -59,7 +59,7 @@
         "platform": "Windows 10",
         "browserName": "firefox",
         "acceptInsecureCerts":"true",
-        "version": "55",
+        "version": "45",
         "idleTimeout":1000
       }
     },
