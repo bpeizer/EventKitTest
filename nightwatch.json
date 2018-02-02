@@ -49,7 +49,7 @@
       "desiredCapabilities": {
         "platform": "Windows 10",
         "browserName": "chrome",
-        "version": "55",
+        "version": "60",
         "idleTimeout":1000
       }
     },
@@ -58,7 +58,7 @@
       "desiredCapabilities": {
         "platform": "Windows 10",
         "browserName": "firefox",
-        "version": "45",
+        "version": "58",
         "idleTimeout":1000
       }
     },
