@@ -6,8 +6,8 @@
 
 var https = require('https');
  module.exports = {
-   '@tags': ['CreateDataPack'],
-    'CreateDataPack': function(client) {
+   '@tags': ['FindDataPack'],
+    'FindDataPack': function(client) {
 
      require('./../common/snaptest-nw-driver.js').bindHelpers(client);
      require('./../common/components.js').bindComponents(client);
