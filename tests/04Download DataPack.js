@@ -44,8 +44,7 @@ var https = require('https');
        .click(`div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > button > div > div`, `CSS`, `Click element`)
        .pause(60000)
        .waitForElementPresent(`.qa-ProviderRow-Check-providerStatus`,240000)
-       .click(`.qa-ProviderRow-ArrowDown`, `CSS`, `Click element`)
-       .click(`.qa-ProviderRow-CloudDownload-taskLinkEnabled`, `CSS`, `Click element`)
+       .click(`div:nth-of-type(4) > div > div:nth-of-type(2) > div > table > thead > tr > th > a > div > button > div > span`, `CSS`, `Click element`)
        .end();
 },
        afterEach: function(client, done) {
