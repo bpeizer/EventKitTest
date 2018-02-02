@@ -58,7 +58,8 @@
       "desiredCapabilities": {
         "platform": "Windows 10",
         "browserName": "firefox",
-        "version": "58",
+        "acceptInsecureCerts":"true",
+        "version": "55",
         "idleTimeout":1000
       }
     },
