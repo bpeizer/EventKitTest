@@ -46,10 +46,8 @@
        .pause(60000)
        .waitForElementPresent(`.qa-ProviderRow-Check-providerStatus`,240000)
        .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(3) > table > tbody > tr > td:nth-of-type(2)`, `CSS`, `COMPLETED`, `El text is... "COMPLETED"`)
-       .elementPresent(`.qa-ProviderRow-Check-providerStatus`, `CSS`, `El is present`)
-       .click(`form > div > div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(3) > button > div > span`, `CSS`, `Click element`)
+       .elementPresent(`.qa-ProviderRow-Check-providerStatus`, `CSS`, `El is present`).click(`form > div > div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(3) > button > div > span`, `CSS`, `Click element`)
        .click(`div > div:nth-of-type(3) > div:nth-of-type(2) > button > div > span`, `CSS`, `Click element`)
-       .click(`div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(3) > div > table > thead > tr > th:nth-of-type(5) > button > svg > path`, `CSS`, `Click element`)
        .end();
 },
       afterEach: function(client, done) {
