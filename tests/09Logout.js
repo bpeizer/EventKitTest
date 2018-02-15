@@ -16,7 +16,7 @@ var https = require('https');
 
 
      client
-      .url(`${baseUrl}/login?redirect=%2Fexports`, 1440, 707, `Load page... "${baseUrl}/login?redirect=%2Fexports"`)
+      .url(`https://eventkit.dev.geointservices.io/login?redirect=%2Fexports`, 1440, 707, `Load page... "https://eventkit.dev.geointservices.io/login?redirect=%2Fexports"`)
       .click(`div .qa-Application-content span`, `CSS`, `Click element`)
       .pathIs(`/oam/west/servlet/login.jsp`, `Path is... "/oam/west/servlet/login.jsp"`)
       .click(`div > ul > li:nth-of-type(4) > a`, `CSS`, `Click element`)
