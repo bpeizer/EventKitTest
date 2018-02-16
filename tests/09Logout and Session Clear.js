@@ -6,8 +6,8 @@
 
 var https = require('https');
  module.exports = {
-   '@tags': ['Logout'],
-    'Logout': function(client) {
+   '@tags': ['Logout and Session Clear'],
+    'Logout and Session Clear': function(client) {
 
      require('./../common/snaptest-nw-driver.js').bindHelpers(client);
      require('./../common/components.js').bindComponents(client);
@@ -35,6 +35,9 @@ var https = require('https');
       .click(`div .qa-Application-content span`, `CSS`, `Click element`)
       .pathIs(`/oam/west/servlet/login.jsp`, `Path is... "/oam/west/servlet/login.jsp"`)
       .elTextIs(`h1`, `CSS`, `GEOAxIS Authentication`, `El text is... "GEOAxIS Authentication"`)
+      .url(`https://eventkit.dev.geointservices.io/exports`, 1440, 707, `Load page... "https://eventkit.dev.geointservices.io/exports"`)
+      .elTextIs(`.qa-LoginPage-container > :nth-child(1) strong`, `CSS`, `Welcome to EventKit`, `El text is... "Welcome to EventKit"`)
+      .elTextIs(`div .qa-Application-content span`, `CSS`, `Login with GEOAxIS`, `El text is... "Login with GEOAxIS"`)
       .end();
 },
        afterEach: function(client, done) {
