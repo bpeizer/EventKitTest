@@ -59,7 +59,7 @@ var https = require('https');
        .end();
 },
        afterEach: function(client, done) {
-        client.customSauceEnd();
+        
 
         setTimeout(function() {
             done();

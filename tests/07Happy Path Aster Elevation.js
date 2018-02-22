@@ -50,7 +50,7 @@
        .click(`div > div:nth-of-type(3) > div:nth-of-type(2) > button > div > span`, `CSS`, `Click element`)      .end();
 },
       afterEach: function(client, done) {
-        client.customSauceEnd();
+        
 
         setTimeout(function() {
             done();
