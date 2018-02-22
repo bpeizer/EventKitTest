@@ -10,7 +10,7 @@
     "start_process" : false,
     "server_path" : "",
     "log_path" : "",
-    "host" : "127.0.0.1",
+    "host" : "http://localhost",
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "",
@@ -24,7 +24,7 @@
     "default" : {
       "launch_url" : "http://localhost",
       "selenium_port"  : 4444,
-      "selenium_host"  : "ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
+      "selenium_host"  : "http://localhost",
       "silent": true,
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
