@@ -23,8 +23,8 @@
   "test_settings" : {
     "default" : {
       "launch_url" : "http://localhost",
-      "selenium_port"  : 80,
-      "selenium_host"  : "ondemand.saucelabs.com",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
       "silent": true,
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
@@ -34,8 +34,8 @@
         "enabled" : false,
         "path" : ""
       },
-      "username" : "${SAUCE_USERNAME}",
-      "access_key" : "${SAUCE_ACCESS_KEY}",
+      "username" : "",
+      "access_key" : "",
 
       "skip_testcases_on_fail": false,
 
