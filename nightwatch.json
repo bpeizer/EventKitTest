@@ -7,10 +7,10 @@
   "globals_path" : "",
 
   "selenium" : {
-    "start_process" : false,
+    "start_process" : true,
     "server_path" : "",
     "log_path" : "",
-    "host" : "http://localhost",
+    "host" : "http://ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "",
@@ -22,9 +22,9 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://localhost",
+      "launch_url" : "http://ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
       "selenium_port"  : 4444,
-      "selenium_host"  : "http://localhost",
+      "selenium_host"  : "ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
       "silent": true,
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
@@ -59,7 +59,11 @@
         "platform": "Windows 10",
         "browserName": "firefox",
         "acceptInsecureCerts":"true",
-        "version": "45",
+        "acceptSslCerts":"true",
+        "webdriver_accept_untrusted_certs":"true",
+        "webdriver_assume_untrusted_issuer":"true",
+        "marionette": true,
+        "version": "56",
         "idleTimeout":1000
       }
     },
