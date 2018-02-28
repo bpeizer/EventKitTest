@@ -10,11 +10,12 @@
     "start_process" : true,
     "server_path" : "",
     "log_path" : "",
-    "host" : "http://ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
+    "host" : "localhost",
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "",
-      "webdriver.ie.driver" : ""
+      "webdriver.ie.driver" : "",
+      "webdriver.firefox.profile": "nightwatch"
     }
   },
 
@@ -22,9 +23,9 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
+      "launch_url" : "http://localhost",
       "selenium_port"  : 4444,
-      "selenium_host"  : "ec2-54-244-62-140.us-west-2.compute.amazonaws.com",
+      "selenium_host"  : "localhost",
       "silent": true,
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
@@ -41,7 +42,10 @@
 
       "desiredCapabilities": {
         "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "acceptSslCerts": true,
+        "acceptInsecureCerts": true,
+        "webdriver_accept_untrusted_certs":true,
+        "webdriver_assume_untrusted_issuer":false
       }
     },
 
@@ -58,12 +62,12 @@
       "desiredCapabilities": {
         "platform": "Windows 10",
         "browserName": "firefox",
-        "acceptInsecureCerts":"true",
-        "acceptSslCerts":"true",
-        "webdriver_accept_untrusted_certs":"true",
-        "webdriver_assume_untrusted_issuer":"true",
+        "acceptInsecureCerts":true,
+        "acceptSslCerts":true,
+        "webdriver_accept_untrusted_certs":true,
+        "webdriver_assume_untrusted_issuer":false,
         "marionette": true,
-        "version": "56",
+        "version": "59",
         "idleTimeout":1000
       }
     },

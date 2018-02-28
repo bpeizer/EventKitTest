@@ -13,7 +13,7 @@ var https = require('https');
      require('./../common/snaptest-nw-driver.js').bindHelpers(client);
      require('./../common/components.js').bindComponents(client);
 
-     var baseUrl = client.launchUrl || `https://eventkit.dev.geointservices.io`;
+     var baseUrl = client.launchUrl || `https://eventkit.geointservices.io`;
 
 
      client
