@@ -15,13 +15,6 @@ node {
     ])
   }
 
-  stage ('Install Browser') {
-        sh '''
-        apt-get install xvfb
-        apt-get install firefox
-        '''
-  }
-
   stage('Test') {
     withCredentials([file(credentialsId: 'eventkit_postman_environment', variable: 'POSTMAN_FILE')]) {
     withCredentials([usernamePassword(credentialsId: 'eventkit_geoxis', usernameVariable: 'GEOAXIS_USERNAME', passwordVariable: 'GEOAXIS_PASSWORD')]) {
@@ -29,13 +22,16 @@ node {
       withEnv(["PATH+=${root}/node_modules/newman/bin:${nodejs}/bin", "HOME=${root}"]){ 
       withEnv(["DISPLAY=:0"]){
            sh "npm install -g newman"
+           sh "npm install selenium-standalone@latest -g"
+
            sh "npm install"
+           sh 'xvfb-run --server-args="-screen 0, 1366x768x24" selenium-standalone start'
            //sh "java -jar selenium-server-standalone-3.9.1.jar"
            sh '''           
             echo PATH=$PATH
             echo HOME=$HOME
             '''
-           sh "xvfb-run sh EventKit.sh" 
+           sh "sh EventKit.sh" 
                }  
               }
             }   
