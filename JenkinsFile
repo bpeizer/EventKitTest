@@ -23,7 +23,7 @@ node {
       withEnv(["DISPLAY=:0"]){
            sh "npm install -g newman"
            sh "npm install selenium-standalone@latest -g"
-
+            sh "yum -y install xorg-x11-server-Xvfb"
            sh "npm install"
            sh 'xvfb-run --server-args="-screen 0, 1366x768x24" selenium-standalone start'
            //sh "java -jar selenium-server-standalone-3.9.1.jar"
