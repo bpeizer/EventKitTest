@@ -17,18 +17,8 @@ node {
 
   stage ('Install Browser') {
         sh '''
-            # Install Chromium.
-            # sudo apt-get -y install chromium-browser
-
-            # Install GeckoDriver.
-            # wget -N https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz -P Selenium
-            # tar -xzf Selenium/geckodriver-v0.19.1-linux64.tar.gz -C Selenium
-            # rm Selenium/geckodriver-v0.19.1-linux64.tar.gz
-
-            # Install ChromeDriver.
-            wget -N http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip -P Selenium
-            unzip -o Selenium/chromedriver_linux64.zip -d Selenium
-            rm Selenium/chromedriver_linux64.zip
+        apt-get install xvfb
+        apt-get install firefox
         '''
   }
 
@@ -45,7 +35,7 @@ node {
             echo PATH=$PATH
             echo HOME=$HOME
             '''
-           sh "Xvfb $DISPLAY & sh EventKit.sh" 
+           sh "xvfb-run sh EventKit.sh" 
                }  
               }
             }   
