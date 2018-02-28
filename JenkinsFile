@@ -38,8 +38,6 @@ node {
       withEnv(["DISPLAY=:0"]){
            sh "npm install -g newman"
            sh "java -jar selenium-server-standalone.jar&"
-            sh ""
-           sh "npm install"
            sh '''           
             echo PATH=$PATH
             echo HOME=$HOME
