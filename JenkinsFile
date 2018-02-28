@@ -43,7 +43,6 @@ node {
            sh '''           
             echo PATH=$PATH
             echo HOME=$HOME
-            Xvfb $DISPLAY &
             sh EventKit.sh
             '''
  
