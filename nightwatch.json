@@ -13,8 +13,8 @@
     "host" : "localhost",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "/usr/bin/google-chrome",
-      "webdriver.firefox.profile" : "geckodriver.exe"
+      "webdriver.chrome.driver" : "./chromedriver.exe",
+      "webdriver.firefox.profile" : "./geckodriver.exe"
     }
   },
 
