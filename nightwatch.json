@@ -13,7 +13,7 @@
     "host" : "localhost",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "chromedriver",
+      "webdriver.chrome.driver" : "Selenium/chromedriver",
       "webdriver.gecko.driver" : "geckodriver"
     }
   },
