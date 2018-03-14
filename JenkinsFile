@@ -14,26 +14,14 @@ node {
       branch: "master"
     ])
   }
-    stage ('Install Browser') {
+    stage ('Docker Selenium Container') {
         sh '''
-            # Install Chromium.
-            # sudo apt-get -y install chromium-browser
-
-            # Install GeckoDriver.
-            # wget -N https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz -P Selenium
-            # tar -xzf Selenium/geckodriver-v0.19.1-linux64.tar.gz -C Selenium
-            # rm Selenium/geckodriver-v0.19.1-linux64.tar.gz
-
-            # Install ChromeDriver.
-            wget -N http://chromedriver.storage.googleapis.com/2.35/chromedriver_linux64.zip -P Selenium
-            unzip -o Selenium/chromedriver_linux64.zip -d Selenium
-            rm Selenium/chromedriver_linux64.zip
+            # docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug:3.11.0-antimony
+            # docker run -d -p 4445:4445 -p 5901:5901 -v /dev/shm:/dev/shm selenium/standalone-firefox-debug:3.11.0-antimony
         '''
     }
   stage('Test') {
     withCredentials([file(credentialsId: 'eventkit_postman_environment', variable: 'POSTMAN_FILE')]) {
-    withCredentials([usernamePassword(credentialsId: 'eventkit_geoxis', usernameVariable: 'GEOAXIS_USERNAME', passwordVariable: 'GEOAXIS_PASSWORD')]) {
-    withCredentials([usernamePassword(credentialsId: 'eventkit_saucelabs', usernameVariable: 'SAUCE_USERNAME', passwordVariable: 'SAUCE_ACCESS_KEY')]) {
       withEnv(["PATH+=${root}/node_modules/newman/bin:${nodejs}/bin", "HOME=${root}"]){ 
       withEnv(["DISPLAY=:0"]){
            sh "npm install -g newman"
@@ -45,8 +33,6 @@ node {
  
                }  
               }
-            }   
-           }
          }
   }
          
