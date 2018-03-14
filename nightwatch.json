@@ -27,8 +27,8 @@
       "selenium_host"  : "localhost",
       "silent": true,
       "globals" : {
-        "GeoAxisUser" : "${GEOAXIS_USERNAME}",
-        "GeoAxisPass" : "${GEOAXIS_PASSWORD}"
+        "GeoAxisUser" : "XXXXXXX",
+        "GeoAxisPass" : "XXXXXXXX"
       },
       "screenshots" : {
         "enabled" : false,
