@@ -5,9 +5,9 @@
 
   <testsuite name="03Download DataPack"
     errors="0" failures="1" hostname="" id="" package="03Download DataPack" skipped="0"
-    tests="1" time="32.03" timestamp="Thu, 15 Mar 2018 16:42:12 GMT">
+    tests="1" time="35.06" timestamp="Thu, 15 Mar 2018 17:42:11 GMT">
   
-    <testcase name="DownloadDataPack" classname="03Download DataPack" time="32.03" assertions="12">
+    <testcase name="DownloadDataPack" classname="03Download DataPack" time="35.06" assertions="12">
 
     
 

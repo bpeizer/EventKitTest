@@ -5,9 +5,9 @@
 
   <testsuite name="05Happy Path Street Map Themes"
     errors="0" failures="1" hostname="" id="" package="05Happy Path Street Map Themes" skipped="0"
-    tests="1" time="29.51" timestamp="Thu, 15 Mar 2018 16:43:14 GMT">
+    tests="1" time="32.61" timestamp="Thu, 15 Mar 2018 17:43:19 GMT">
   
-    <testcase name="HappyPath StreetMap Themes" classname="05Happy Path Street Map Themes" time="29.51" assertions="12">
+    <testcase name="HappyPath StreetMap Themes" classname="05Happy Path Street Map Themes" time="32.61" assertions="12">
 
     
 

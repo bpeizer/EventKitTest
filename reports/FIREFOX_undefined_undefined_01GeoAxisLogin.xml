@@ -5,9 +5,9 @@
 
   <testsuite name="01GeoAxisLogin"
     errors="0" failures="0" hostname="" id="" package="01GeoAxisLogin" skipped="0"
-    tests="1" time="25.49" timestamp="Thu, 15 Mar 2018 16:41:22 GMT">
+    tests="1" time="22.60" timestamp="Thu, 15 Mar 2018 17:41:25 GMT">
   
-    <testcase name="GeoAxisLogin" classname="01GeoAxisLogin" time="25.49" assertions="9">
+    <testcase name="GeoAxisLogin" classname="01GeoAxisLogin" time="22.60" assertions="9">
 
     
 

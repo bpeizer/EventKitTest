@@ -5,9 +5,9 @@
 
   <testsuite name="04Happy Path DigitalGlobe Imagery"
     errors="0" failures="1" hostname="" id="" package="04Happy Path DigitalGlobe Imagery" skipped="0"
-    tests="1" time="30.01" timestamp="Thu, 15 Mar 2018 16:42:44 GMT">
+    tests="1" time="32.80" timestamp="Thu, 15 Mar 2018 17:42:46 GMT">
   
-    <testcase name="HappyPath DigitalGlobe Imagery" classname="04Happy Path DigitalGlobe Imagery" time="30.01" assertions="12">
+    <testcase name="HappyPath DigitalGlobe Imagery" classname="04Happy Path DigitalGlobe Imagery" time="32.80" assertions="12">
 
     
 

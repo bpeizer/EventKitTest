@@ -5,9 +5,9 @@
 
   <testsuite name="07Happy Path Aster Elevation"
     errors="0" failures="1" hostname="" id="" package="07Happy Path Aster Elevation" skipped="0"
-    tests="1" time="33.09" timestamp="Thu, 15 Mar 2018 16:44:15 GMT">
+    tests="1" time="37.60" timestamp="Thu, 15 Mar 2018 17:44:23 GMT">
   
-    <testcase name="HappyPath Aster Elevation" classname="07Happy Path Aster Elevation" time="33.09" assertions="12">
+    <testcase name="HappyPath Aster Elevation" classname="07Happy Path Aster Elevation" time="37.60" assertions="12">
 
     
 
