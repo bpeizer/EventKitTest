@@ -18,7 +18,7 @@
     }
   },
 
-  "test_workers" : {"enabled" : true, "workers" : "auto"},
+  "test_workers" : {"enabled" : false, "workers" : "auto"},
 
   "test_settings" : {
     "default" : {
@@ -29,7 +29,7 @@
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
         "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
-        "EventKitBase" :"https://eventkit.test.dev.east.paas.geointservices.io"
+        "EventKitBase" :"https://eventkit.geointservices.io"
       },
       "screenshots" : {
         "enabled" : false,
@@ -51,7 +51,6 @@
 
     "chrome": {
       "desiredCapabilities": {
-        "platform": "Windows 10",
         "browserName": "chrome",
         "version": "60",
         "idleTimeout":1000
@@ -60,7 +59,6 @@
 
     "firefox" : {
       "desiredCapabilities": {
-        "platform": "Windows 10",
         "browserName": "firefox",
         "acceptInsecureCerts":true,
         "acceptSslCerts":true,
