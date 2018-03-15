@@ -14,7 +14,7 @@ node {
       branch: "master"
     ])
   }
-  stage(' Run FireFox Test') {
+  stage(' Run Test') {
     withCredentials([file(credentialsId: 'eventkit_postman_environment', variable: 'POSTMAN_FILE')]) {
       withEnv(["PATH+=${root}/node_modules/newman/bin:${nodejs}/bin", "HOME=${root}"]){ 
       withEnv(["DISPLAY=:0"]){
