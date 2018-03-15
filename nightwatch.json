@@ -27,8 +27,9 @@
       "selenium_host"  : "localhost",
       "silent": true,
       "globals" : {
-        "GeoAxisUser" : "XXXXXXX",
-        "GeoAxisPass" : "XXXXXXXX"
+        "GeoAxisUser" : "${GEOAXIS_USERNAME}",
+        "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
+        "EventKitBase" :"https://eventkit.test.dev.east.paas.geointservices.io"
       },
       "screenshots" : {
         "enabled" : false,

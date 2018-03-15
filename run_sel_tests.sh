@@ -3,7 +3,6 @@ echo start
 
 echo "\\/ \\/ \\/ CHECK FOR ENV VARS HERE \\/ \\/ \\/"
 echo "$GEOAXIS_USERNAME"
-echo "$SAUCE_USERNAME"
 echo "^  ^  ^  CHECK FOR ENV VARS HERE  ^  ^  ^"
 
 pushd `dirname $0` > /dev/null
@@ -25,13 +24,23 @@ echo "RUN TESTS ON CHROME"
 
 
 
-		# Run the Selenium tests.  
-		npm test || { latch=1; }
-		
+		# Run the Firefox Selenium tests.
+		FirefoxContainer="$(docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-firefox-debug:3.11.0-antimony)"  
+		npm testFirefox || { latch=1; }
+		# Remember that there was an overall failure, if a single iteration has a failure.
+		docker kill "${FirefoxContainer}"
+		if [ "$latch" -eq "1" ]; then
+			bigLatch=1
+		fi
+		# Run the Chrome Selenium tests.
+		ChromeContainer="$(docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug:3.11.0-antimony)"  
+		npm testChrome || { latch=1; }
+		docker kill "${ChromeContainer}"
 		# Remember that there was an overall failure, if a single iteration has a failure.
 		if [ "$latch" -eq "1" ]; then
 			bigLatch=1
 		fi
+
 
 # Return an overall error if any collections failed.
 exit $bigLatch

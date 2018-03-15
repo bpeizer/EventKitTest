@@ -5,9 +5,11 @@
 
   <testsuite name="05Happy Path Street Map Themes"
     errors="0" failures="1" hostname="" id="" package="05Happy Path Street Map Themes" skipped="0"
-    tests="1" time="12.37" timestamp="Wed, 14 Mar 2018 19:09:09 GMT">
+    tests="1" time="25.38" timestamp="Wed, 14 Mar 2018 20:14:34 GMT">
   
-    <testcase name="HappyPath StreetMap Themes" classname="05Happy Path Street Map Themes" time="12.37" assertions="1">  <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click 'div &gt; div &gt; div &gt; div &gt; div:nth-of-type(2) &gt; button &gt; div &gt; div &gt; span' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:200:22)
+    <testcase name="HappyPath StreetMap Themes" classname="05Happy Path Street Map Themes" time="25.38" assertions="2">
+
+      <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click '.bootstrap-typeahead-menu &gt; :nth-child(3) .qa-TypeaheadMenuItem-name' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:200:22)
     at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:383:11)</failure>
 
     

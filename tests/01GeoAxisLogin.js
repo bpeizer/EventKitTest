@@ -13,11 +13,11 @@
      require('./../common/snaptest-nw-driver.js').bindHelpers(client);
      require('./../common/components.js').bindComponents(client);
 
-     var baseUrl = client.launchUrl || `https://eventkit.geointservices.io`;
+     var baseUrl = client.launchUrl || client.globals.EventKitBase;
 
 
      client
-       .url(`https://eventkit.geointservices.io/login?redirect=%2Fexports`, 500, 500, `Load page... "https://eventkit.geointservices.io/login?redirect=%2Fexports"`)
+       .url(client.globals.EventKitBase, 500, 500, `Load page... "client.globals.EventKitBase"`)
        .maximizeWindow()
        .click(`div > div > div > div > div:nth-of-type(2) > button > div > div > span`, `CSS`, `Click element`)
        .pathIs(`/oam/west/servlet/login.jsp`, `Path is... "/oam/west/servlet/login.jsp"`)
@@ -25,7 +25,7 @@
        .click(`[name=password]`, `CSS`, `Click element`)
        .changeInput(`[name=password]`, `CSS`, client.globals.GeoAxisPass, `Change input to... "client.globals.GeoAxisPass"`)
        .click(`[name=username]`, `CSS`, `Click element`)
-       .changeInput(`[name=username]`, `CSS`, 'PzTestPass16', `Change input to... "client.globals.GeoAxisUser"`)
+       .changeInput(`[name=username]`, `CSS`, client.globals.GeoAxisUser, `Change input to... "client.globals.GeoAxisUser"`)
        .click(`[name=submit]`, `CSS`, `Click element`)
        .pathIs(`/exports`, `Path is... "/exports"`)
        .end();
