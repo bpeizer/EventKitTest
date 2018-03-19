@@ -25,21 +25,14 @@ echo "RUN TESTS ON FIREFOX"
 
 
 		# Run the Firefox Selenium tests.
-	#	FirefoxContainer="$(docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-firefox-debug:3.11.0-antimony)"  
-	#	./node_modules/.bin/nightwatch -e firefox tests || { latch=1; }
+		./node_modules/.bin/nightwatch -e firefox tests || { latch=1; }
 		# Remember that there was an overall failure, if a single iteration has a failure.
-	#	docker logs "${FirefoxContainer}"
-	#	docker kill "${FirefoxContainer}"
-	#	if [ "$latch" -eq "1" ]; then
-	#		bigLatch=1
-	#	fi
+		if [ "$latch" -eq "1" ]; then
+			bigLatch=1
+		fi
 echo "RUN TESTS ON CHROME"
-		# Run the Chrome Selenium tests.
-		ChromeContainer="$(docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-chrome-debug:3.11.0-antimony)"  
+		# Run the Chrome Selenium tests.  
 		./node_modules/.bin/nightwatch -e chrome tests || { latch=1; }
-
-		docker logs "${ChromeContainer}"
-		docker kill "${ChromeContainer}"
 		# Remember that there was an overall failure, if a single iteration has a failure.
 		if [ "$latch" -eq "1" ]; then
 			bigLatch=1

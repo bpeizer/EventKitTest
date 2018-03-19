@@ -10,7 +10,7 @@
     "start_process" : false,
     "server_path" : "",
     "log_path" : "",
-    "host" : "localhost",
+    "host" : "35.163.57.61",
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "Selenium/chromedriver",
@@ -22,9 +22,9 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "localhost",
+      "launch_url" : "35.163.57.61",
       "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
+      "selenium_host"  : "35.163.57.61",
       "silent": true,
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
@@ -65,7 +65,7 @@
         "webdriver_accept_untrusted_certs":true,
         "webdriver_assume_untrusted_issuer":false,
         "marionette": true,
-        "version": "59",
+        "version": "60",
         "idleTimeout":1000
       }
     },

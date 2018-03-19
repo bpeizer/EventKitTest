@@ -5,53 +5,9 @@
 
   <testsuite name="03Download DataPack"
     errors="0" failures="1" hostname="" id="" package="03Download DataPack" skipped="0"
-    tests="1" time="102.9" timestamp="Mon, 19 Mar 2018 18:47:56 GMT">
+    tests="1" time="100.9" timestamp="Mon, 19 Mar 2018 16:31:46 GMT">
   
-    <testcase name="DownloadDataPack" classname="03Download DataPack" time="102.9" assertions="25">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <testcase name="DownloadDataPack" classname="03Download DataPack" time="100.9" assertions="3">
 
     
 

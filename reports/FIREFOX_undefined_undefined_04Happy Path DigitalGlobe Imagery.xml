@@ -5,9 +5,9 @@
 
   <testsuite name="04Happy Path DigitalGlobe Imagery"
     errors="0" failures="1" hostname="" id="" package="04Happy Path DigitalGlobe Imagery" skipped="0"
-    tests="1" time="32.80" timestamp="Thu, 15 Mar 2018 17:42:46 GMT">
+    tests="1" time="103.1" timestamp="Mon, 19 Mar 2018 18:49:39 GMT">
   
-    <testcase name="HappyPath DigitalGlobe Imagery" classname="04Happy Path DigitalGlobe Imagery" time="32.80" assertions="12">
+    <testcase name="HappyPath DigitalGlobe Imagery" classname="04Happy Path DigitalGlobe Imagery" time="103.1" assertions="27">
 
     
 
@@ -29,7 +29,37 @@
 
     
 
-      <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click '.bootstrap-typeahead-menu &gt; :nth-child(3) .qa-TypeaheadMenuItem-name' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:200:22)
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Failed [ok]: (FAILED: 'El text is... &quot;COMPLETED&quot;' - Couldn't find element. (Assert text matches 'COMPLETED' at 'div &gt; form &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; table &gt; tbody &gt; tr &gt; td:nth-of-type(2)' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:509:22)
     at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:383:11)</failure>
 
     

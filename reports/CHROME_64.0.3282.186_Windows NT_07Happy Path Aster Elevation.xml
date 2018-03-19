@@ -3,59 +3,11 @@
             failures="1"
             tests="1">
 
-  <testsuite name="06Happy Path Street Map Tile"
-    errors="0" failures="1" hostname="" id="" package="06Happy Path Street Map Tile" skipped="0"
-    tests="1" time="328.3" timestamp="Mon, 19 Mar 2018 18:56:54 GMT">
+  <testsuite name="07Happy Path Aster Elevation"
+    errors="0" failures="1" hostname="" id="" package="07Happy Path Aster Elevation" skipped="0"
+    tests="1" time="98.37" timestamp="Mon, 19 Mar 2018 16:42:58 GMT">
   
-    <testcase name="HappyPath StreetMap Tile" classname="06Happy Path Street Map Tile" time="328.3" assertions="27">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <testcase name="HappyPath Aster Elevation" classname="07Happy Path Aster Elevation" time="98.37" assertions="3">
 
     
 

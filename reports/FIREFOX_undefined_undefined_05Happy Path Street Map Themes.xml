@@ -5,9 +5,9 @@
 
   <testsuite name="05Happy Path Street Map Themes"
     errors="0" failures="1" hostname="" id="" package="05Happy Path Street Map Themes" skipped="0"
-    tests="1" time="32.61" timestamp="Thu, 15 Mar 2018 17:43:19 GMT">
+    tests="1" time="332.0" timestamp="Mon, 19 Mar 2018 18:51:22 GMT">
   
-    <testcase name="HappyPath StreetMap Themes" classname="05Happy Path Street Map Themes" time="32.61" assertions="12">
+    <testcase name="HappyPath StreetMap Themes" classname="05Happy Path Street Map Themes" time="332.0" assertions="26">
 
     
 
@@ -29,8 +29,36 @@
 
     
 
-      <failure message="Failed [ok]: (FAILED: 'Click element' - Couldn't find element to click. (Click '.bootstrap-typeahead-menu &gt; :nth-child(3) .qa-TypeaheadMenuItem-name' using 'CSS'))">    at browser._elementPresent (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:200:22)
-    at Object.&lt;anonymous&gt; (/Users/Peizer/Documents/EventKitTest/common/snaptest-nw-driver.js:383:11)</failure>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;.qa-ProviderRow-Check-providerStatus&gt; to be present for 240000 milliseconds.">    at Object.HappyPath StreetMap Themes (/Users/Peizer/Documents/EventKitTest/tests/05Happy Path Street Map Themes.js:47:9)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)</failure>
 
     
     </testcase>

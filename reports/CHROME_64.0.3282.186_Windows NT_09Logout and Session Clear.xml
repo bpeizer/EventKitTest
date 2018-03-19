@@ -5,23 +5,9 @@
 
   <testsuite name="09Logout and Session Clear"
     errors="0" failures="1" hostname="" id="" package="09Logout and Session Clear" skipped="0"
-    tests="1" time="35.20" timestamp="Mon, 19 Mar 2018 19:04:55 GMT">
+    tests="1" time="30.07" timestamp="Mon, 19 Mar 2018 16:45:18 GMT">
   
-    <testcase name="Logout and Session Clear" classname="09Logout and Session Clear" time="35.20" assertions="12">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+    <testcase name="Logout and Session Clear" classname="09Logout and Session Clear" time="30.07" assertions="5">
 
     
 
