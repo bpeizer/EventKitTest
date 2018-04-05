@@ -53,7 +53,12 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "version": "65",
-        "idleTimeout":1000
+        "idleTimeout":1000,
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "acceptInsecureCerts": true,
+        "webdriver_accept_untrusted_certs":true,
+        "webdriver_assume_untrusted_issuer":false
       }
     },
 

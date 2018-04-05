@@ -56,7 +56,7 @@
         "acceptSslCerts":true,
         "webdriver_accept_untrusted_certs":true,
         "webdriver_assume_untrusted_issuer":false,
-        "marionette": true,
+        "marionette": false,
         "version": "60",
         "idleTimeout":1000
       }
