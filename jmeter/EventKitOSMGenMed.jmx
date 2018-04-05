@@ -295,30 +295,12 @@
     &quot;include_zipfile&quot;:false,&#xd;
     &quot;published&quot;:true,&#xd;
     &quot;provider_tasks&quot;:[  &#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;Aster Elevation (V2)&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       },&#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;DigitalGlobe Imagery (Foundation GEOINT)&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       },&#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;OpenStreetMap Data (Themes)&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       },&#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;OpenStreetMap Tiles&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       }&#xd;
+      {  &#xd;
+        &quot;provider&quot;:&quot;OpenStreetMap Data (Generic)&quot;,&#xd;
+        &quot;formats&quot;:[  &#xd;
+           &quot;gpkg&quot;&#xd;
+        ]&#xd;
+     }&#xd;
     ],&#xd;
     &quot;selection&quot;:{  &#xd;
        &quot;type&quot;:&quot;FeatureCollection&quot;,&#xd;
@@ -330,29 +312,29 @@
              },&#xd;
              &quot;geometry&quot;:{  &#xd;
                 &quot;type&quot;:&quot;Polygon&quot;,&#xd;
-                &quot;coordinates&quot;:[  &#xd;
-                   [  &#xd;
-                      [  &#xd;
-                         -118.787583,&#xd;
-                         34.02713&#xd;
-                      ],&#xd;
-                      [  &#xd;
-                         -118.786126,&#xd;
-                         34.02713&#xd;
-                      ],&#xd;
-                      [  &#xd;
-                         -118.786126,&#xd;
-                         34.028068&#xd;
-                      ],&#xd;
-                      [  &#xd;
-                         -118.787583,&#xd;
-                         34.028068&#xd;
-                      ],&#xd;
-                      [  &#xd;
-                         -118.787583,&#xd;
-                         34.02713&#xd;
-                      ]&#xd;
-                   ]&#xd;
+                &quot;coordinates&quot;: [&#xd;
+                  [&#xd;
+                    [&#xd;
+                      44.298248291015625,&#xd;
+                      33.25074713120332&#xd;
+                    ],&#xd;
+                    [&#xd;
+                      44.52415466308594,&#xd;
+                      33.25074713120332&#xd;
+                    ],&#xd;
+                    [&#xd;
+                      44.52415466308594,&#xd;
+                      33.42055294916349&#xd;
+                    ],&#xd;
+                    [&#xd;
+                      44.298248291015625,&#xd;
+                      33.42055294916349&#xd;
+                    ],&#xd;
+                    [&#xd;
+                      44.298248291015625,&#xd;
+                      33.25074713120332&#xd;
+                    ]&#xd;
+                  ]&#xd;
                 ]&#xd;
              }&#xd;
           }&#xd;
@@ -466,7 +448,7 @@
               </ConstantTimer>
               <hashTree/>
               <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller" enabled="true">
-                <stringProp name="WhileController.condition">${__javaScript(parseInt(&quot;${LoopCounter}&quot;) &lt; 3600 &amp;&amp; &quot;${JobStatus}&quot; != &quot;COMPLETED&quot; &amp;&amp; &quot;${JobStatus}&quot; != &quot;INCOMPLETE&quot;,)}</stringProp>
+                <stringProp name="WhileController.condition">${__javaScript(parseInt(&quot;${LoopCounter}&quot;) &lt; 36000 &amp;&amp; &quot;${JobStatus}&quot; != &quot;COMPLETED&quot; &amp;&amp; &quot;${JobStatus}&quot; != &quot;INCOMPLETE&quot;,)}</stringProp>
               </WhileController>
               <hashTree>
                 <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/runs?job_uid=${JobUUID}" enabled="true">
@@ -525,8 +507,8 @@
                   <hashTree/>
                   <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="LoopCounter" enabled="true">
                     <stringProp name="CounterConfig.start">0</stringProp>
-                    <stringProp name="CounterConfig.end">1000</stringProp>
-                    <stringProp name="CounterConfig.incr">5</stringProp>
+                    <stringProp name="CounterConfig.end">36000</stringProp>
+                    <stringProp name="CounterConfig.incr">20</stringProp>
                     <stringProp name="CounterConfig.name">LoopCounter</stringProp>
                     <stringProp name="CounterConfig.format"></stringProp>
                     <boolProp name="CounterConfig.per_user">true</boolProp>
@@ -540,7 +522,7 @@
                   </DebugPostProcessor>
                   <hashTree/>
                   <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-                    <stringProp name="ConstantTimer.delay">5000</stringProp>
+                    <stringProp name="ConstantTimer.delay">20000</stringProp>
                   </ConstantTimer>
                   <hashTree/>
                   <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
@@ -911,7 +893,7 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugPostProcessor>
         <hashTree/>
-        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report 10" enabled="true">
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report 10 OSMGen" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -947,7 +929,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer 10" enabled="true">
+        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer 10 OSMGen " enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -980,7 +962,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">/Users/Peizer/Documents/EventKitTest/jmeter/LoadTestResultsRaw10.csv</stringProp>
+          <stringProp name="filename">/Users/Peizer/Documents/EventKitTest/jmeter/LoadTestResultsRaw10OSMGen.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

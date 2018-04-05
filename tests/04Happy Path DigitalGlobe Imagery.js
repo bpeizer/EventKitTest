@@ -45,9 +45,10 @@
        .click(`div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > button > div > div`, `CSS`, `Click element`)
        .pause(60000)
        .waitForElementPresent(`.qa-ProviderRow-Check-providerStatus`,240000)
-       .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(3) > table > tbody > tr > td:nth-of-type(2)`, `CSS`, `COMPLETED`, `El text is... "COMPLETED"`)
-       .elementPresent(`.qa-ProviderRow-Check-providerStatus`, `CSS`, `El is present`).click(`form > div > div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(3) > button > div > span`, `CSS`, `Click element`)
-       .click(`div > div:nth-of-type(3) > div:nth-of-type(2) > button > div > span`, `CSS`, `Click element`)
+       .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2)`, `CSS`, `COMPLETED`, `El text is... "COMPLETED"`)
+       .elementPresent(`.qa-ProviderRow-Check-providerStatus`, `CSS`, `El is present`)
+       .click(`.qa-DataPackOptions-RaisedButton-deleteExport > button`, `CSS`, `Click element`)
+       .click(`.qa-ConfirmDialog-RaisedButton-ConfirmButton > button`, `CSS`, `Click element`)
        .end();
 },
       afterEach: function(client, done) {

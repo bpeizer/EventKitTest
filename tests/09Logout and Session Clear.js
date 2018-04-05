@@ -28,7 +28,7 @@ var https = require('https');
       .elementPresent(`header > div > div`, `CSS`, `El is present`)
       .elementPresent(`div .qa-Application-header img`, `CSS`, `El is present`)
       .click(`.qa-Application-Link-logout`, `CSS`, `Click element`)
-      .pathIs(`/oam/server/logout`, `Path is... "/oam/server/logout"`)
+      .click(`.qa-ConfirmDialog-RaisedButton-ConfirmButton > button`,`CSS`,`click element`)
       .pathIs(`/login`, `Path is... "/login"`)
       .elTextIs(`.qa-LoginPage-container > :nth-child(1) strong`, `CSS`, `Welcome to EventKit`, `El text is... "Welcome to EventKit"`)
       .elTextIs(`div .qa-Application-content span`, `CSS`, `Login with GEOAxIS`, `El text is... "Login with GEOAxIS"`)

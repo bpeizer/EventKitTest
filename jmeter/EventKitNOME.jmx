@@ -296,25 +296,7 @@
     &quot;published&quot;:true,&#xd;
     &quot;provider_tasks&quot;:[  &#xd;
        {  &#xd;
-          &quot;provider&quot;:&quot;Aster Elevation (V2)&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       },&#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;DigitalGlobe Imagery (Foundation GEOINT)&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       },&#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;OpenStreetMap Data (Themes)&quot;,&#xd;
-          &quot;formats&quot;:[  &#xd;
-             &quot;gpkg&quot;&#xd;
-          ]&#xd;
-       },&#xd;
-       {  &#xd;
-          &quot;provider&quot;:&quot;OpenStreetMap Tiles&quot;,&#xd;
+          &quot;provider&quot;:&quot;NOME&quot;,&#xd;
           &quot;formats&quot;:[  &#xd;
              &quot;gpkg&quot;&#xd;
           ]&#xd;
@@ -911,7 +893,7 @@
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugPostProcessor>
         <hashTree/>
-        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report 10" enabled="true">
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report 10 NOME" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -947,7 +929,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer 10" enabled="true">
+        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer 10 NOME" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -980,7 +962,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">/Users/Peizer/Documents/EventKitTest/jmeter/LoadTestResultsRaw10.csv</stringProp>
+          <stringProp name="filename">/Users/Peizer/Documents/EventKitTest/jmeter/LoadTestResultsRaw10NOME.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

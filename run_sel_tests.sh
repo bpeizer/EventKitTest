@@ -25,14 +25,14 @@ echo "RUN TESTS ON FIREFOX"
 
 
 		# Run the Firefox Selenium tests.
-		./node_modules/.bin/nightwatch -e firefox tests || { latch=1; }
+		./node_modules/.bin/nightwatch --config ./nightwatchFirefox.json -e firefox tests || { latch=1; }
 		# Remember that there was an overall failure, if a single iteration has a failure.
 		if [ "$latch" -eq "1" ]; then
 			bigLatch=1
 		fi
 echo "RUN TESTS ON CHROME"
 		# Run the Chrome Selenium tests.  
-		./node_modules/.bin/nightwatch -e chrome tests || { latch=1; }
+		./node_modules/.bin/nightwatch --config ./nightwatchChrome.json -e chrome tests || { latch=1; }
 		# Remember that there was an overall failure, if a single iteration has a failure.
 		if [ "$latch" -eq "1" ]; then
 			bigLatch=1

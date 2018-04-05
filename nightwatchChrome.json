@@ -1,0 +1,70 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "custom_commands",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "",
+  "globals_path" : "",
+
+  "selenium" : {
+    "start_process" : false,
+    "server_path" : "",
+    "log_path" : "",
+    "host" : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "Selenium/chromedriver",
+      "webdriver.gecko.driver" : "geckodriver"
+    }
+  },
+
+  "test_workers" : {"enabled" : false, "workers" : "auto"},
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
+      "silent": true,
+      "globals" : {
+        "GeoAxisUser" : "${GEOAXIS_USERNAME}",
+        "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
+        "EventKitBase" :"https://eventkit.geointservices.io"
+      },
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "username" : "",
+      "access_key" : "",
+
+      "skip_testcases_on_fail": false,
+
+      "desiredCapabilities": {
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "acceptInsecureCerts": true,
+        "webdriver_accept_untrusted_certs":true,
+        "webdriver_assume_untrusted_issuer":false
+      }
+    },
+
+    "chrome": {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "version": "65",
+        "idleTimeout":1000
+      }
+    },
+
+    "internet_explorer_edge" : {
+      "desiredCapabilities": {
+        "platform": "Windows 10",
+        "browserName": "MicrosoftEdge",
+        "version": "latest",
+        "idleTimeout":1000
+      }
+    }
+
+  }
+}
