@@ -56,7 +56,6 @@ module.exports.bindHelpers = function(browser) {
   browser.url = function(pathname, width, height, description) {
     browser.perform(() => comment(description));
     oldUrl(pathname);
-    browser.resizeWindow(width, height);
     return this;
   };
 

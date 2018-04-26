@@ -30,6 +30,8 @@
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
         "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
         "EventKitBase" :"https://eventkit.geointservices.io"
+        "GeoAxisUser2":"${GEOAXIS_USERNAME2}",
+        "GeoAxisUser3":"${GEOAXIS_USERNAME3}"
       },
       "screenshots" : {
         "enabled" : false,
@@ -56,7 +58,7 @@
         "acceptSslCerts":true,
         "webdriver_accept_untrusted_certs":true,
         "webdriver_assume_untrusted_issuer":false,
-        "marionette": false,
+        "marionette": true,
         "version": "60",
         "idleTimeout":1000
       }
