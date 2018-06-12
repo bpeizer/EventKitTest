@@ -29,7 +29,7 @@
       "globals" : {
         "GeoAxisUser" : "${GEOAXIS_USERNAME}",
         "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
-        "EventKitBase" :"https://eventkit.geointservices.io"
+        "EventKitBase" :"https://eventkit.geointservices.io",
         "GeoAxisUser2":"${GEOAXIS_USERNAME2}",
         "GeoAxisUser3":"${GEOAXIS_USERNAME3}"
       },
