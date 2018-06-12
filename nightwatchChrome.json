@@ -27,11 +27,11 @@
       "selenium_host"  : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
       "silent": true,
       "globals" : {
-        "GeoAxisUser" : "${GEOAXIS_USERNAME}",
-        "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
+        "GeoAxisUser" : "${bf_username}",
+        "GeoAxisPass" : "${bf_password}",
         "EventKitBase" :"https://eventkit.geointservices.io",
-        "GeoAxisUser2":"${GEOAXIS_USERNAME2}",
-        "GeoAxisUser3":"${GEOAXIS_USERNAME3}"
+        "GeoAxisUser2":"$pzuser02@gxaws.dev",
+        "GeoAxisUser3":"${bf_password}"
       },
       "screenshots" : {
         "enabled" : false,

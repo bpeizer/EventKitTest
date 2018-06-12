@@ -16,6 +16,7 @@ node {
   }
   stage(' Run Test') {
     withCredentials([file(credentialsId: 'eventkit_postman_environment', variable: 'POSTMAN_FILE')]) {
+    withCredentials([usernamePassword(credentialsId: 'gx_test_account', usernameVariable: 'bf_username', passwordVariable: 'bf_password')]) {
       withEnv(["PATH+=${root}/node_modules/newman/bin:${nodejs}/bin", "HOME=${root}"]){ 
       withEnv(["DISPLAY=:0"]){
            sh "npm install -g newman"
@@ -28,6 +29,7 @@ node {
                }  
               }
          }
+    }
   }
          
  stage ('Cleanup') {
