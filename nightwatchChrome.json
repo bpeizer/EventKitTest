@@ -10,7 +10,7 @@
     "start_process" : false,
     "server_path" : "",
     "log_path" : "",
-    "host" : "localhost",
+    "host" : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "Selenium/chromedriver",
@@ -22,16 +22,16 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "localhost",
+      "launch_url" : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
       "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
+      "selenium_host"  : "ec2-54-190-42-103.us-west-2.compute.amazonaws.com",
       "silent": true,
       "globals" : {
-        "GeoAxisUser" : "pzuser01@gxaws.dev",
-        "GeoAxisPass" : "B@cceBall1!2!3!()",
-        "EventKitBase": "https://eventkit.geointservices.io",
-        "GeoAxisUser2": "pzuser02@gxaws.dev",
-        "GeoAxisUser3": "pzuser03@gxaws.dev",
+        "GeoAxisUser" : "${GEOAXIS_USERNAME}",
+        "GeoAxisPass" : "${GEOAXIS_PASSWORD}",
+        "EventKitBase" :"https://eventkit.geointservices.io",
+        "GeoAxisUser2":"${GEOAXIS_USERNAME2}",
+        "GeoAxisUser3":"${GEOAXIS_USERNAME3}"
       },
       "screenshots" : {
         "enabled" : false,

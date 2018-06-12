@@ -24,16 +24,19 @@ exports.command = function(client,filterOption){
                 var source = filterOption.substr(filterOption.indexOf("=") + 1, filterOption.length());
                 switch (source) {
                     case "DigitalGlobe Imagery (Foundation GEOINT)":
-                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(1) > input`, `CSS`, `Click DGI filter`);
+                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(2) > input`, `CSS`, `Click DGI filter`);
                         break;
                     case "NOME":
-                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(2) > input`, `CSS`, `Click NOME filter`);
+                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(3) > input`, `CSS`, `Click NOME filter`);
                         break;
                     case "OpenStreetMap Data (Themes)":
-                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(3) > input`, `CSS`, `Click OSM Themes filter`);
+                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(4) > input`, `CSS`, `Click OSM Themes filter`);
                         break;
                     case "OpenStreetMap Tiles":
-                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(4) > input`, `CSS`, `Click OSM Tiles filter`);
+                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(5) > input`, `CSS`, `Click OSM Tiles filter`);
+                        break;
+                    case "Aster Elevation (V2)":
+                        client.click(`.qa-ProvidersFilter-Checkbox:nth-of-type(1) > input`, `CSS`, `Click DGI filter`);
                         break;
                 }
             }

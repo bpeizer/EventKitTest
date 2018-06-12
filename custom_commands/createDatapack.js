@@ -5,17 +5,19 @@ exports.command = function(client,nameOfAOI,numberOnList,dataProvider,otherOptio
     var providerNumber;
     switch(dataProvider){
         case "DigitalGlobe Imagery (Foundation GEOINT)":
-            providerNumber=1;
-            break;
-        case "NOME":
             providerNumber=2;
             break;
-        case "OpenStreetMap Data (Themes)":
+        case "NOME":
             providerNumber=3;
             break;
-        case "OpenStreetMap Tiles":
+        case "OpenStreetMap Data (Themes)":
             providerNumber=4;
             break;
+        case "OpenStreetMap Tiles":
+            providerNumber=5;
+            break;
+        case "Aster Elevation (V2)":
+            providerNumber=1;
     }
 
     client
