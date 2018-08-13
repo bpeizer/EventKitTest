@@ -19,7 +19,7 @@
          .url(client.globals.EventKitBase)
          .loginStep(client,client.globals.GeoAxisUser, client.globals.GeoAxisPass)
          .menuNavigation(client,"Create DataPack")
-         .createDatapack(client,'Broadlands','1','ASTER','Delete')
+         .createDatapack(client,'Delaplaine','1','Aster Elevation (V2)','Delete')
        .end();
 }
  };

@@ -9,8 +9,8 @@ var https = require('https');
    '@tags': ['Filters'],
     'Filters': function(client) {
 
-     require('./../common/snaptest-nw-driver.js').bindHelpers(client);
-     require('./../common/components.js').bindComponents(client);
+     require('../common/snaptest-nw-driver.js').bindHelpers(client);
+     require('../common/components.js').bindComponents(client);
 
      var baseUrl = client.launchUrl || client.globals.EventKitBase;
 

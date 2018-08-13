@@ -3,18 +3,22 @@ exports.command = function(client,nameOfAOI,numberOnList,dataProvider,otherOptio
     require('./../common/components.js').bindComponents(client);
 
     var providerNumber;
+    var counter = 1;
     switch(dataProvider){
         case "DigitalGlobe Imagery (Foundation GEOINT)":
             providerNumber=2;
             break;
-        case "NOME":
+        case "DigitalGlobe (ImageryTileService)":
             providerNumber=3;
             break;
-        case "OpenStreetMap Data (Themes)":
+        case "NOME":
             providerNumber=4;
             break;
-        case "OpenStreetMap Tiles":
+        case "OpenStreetMap Data (Themes)":
             providerNumber=5;
+            break;
+        case "OpenStreetMap Tiles":
+            providerNumber=6;
             break;
         case "Aster Elevation (V2)":
             providerNumber=1;
@@ -25,45 +29,23 @@ exports.command = function(client,nameOfAOI,numberOnList,dataProvider,otherOptio
         .click(`.bootstrap-typeahead-input-main`, `Click AOI input`)
         .changeInput(`.bootstrap-typeahead-input-main`,`CSS`,nameOfAOI, `Change input to...`+nameOfAOI)
         .click(`.bootstrap-typeahead-menu > :nth-child(`+numberOnList+`) .qa-TypeaheadMenuItem-name`, `CSS`, `Click AOI from finder`)
-        .elementPresent(`.qa-BreadcrumbStepper-step1Label`,`CSS`,`Step one label is showing`)
-        .click(`.qa-BreadcrumbStepper-FloatingActionButton-case0 > button`, `CSS`, `Click move to next step`)
-        .elementPresent(`.qa-BreadcrumbStepper-step2Label`,`CSS`,`Step two label is showing`)
-        .click(`.qa-BreadcrumbStepper-NavigationArrowBack-previous-case1 > path`,`CSS`,`Click move back one step`)
-        .elementPresent(`.qa-BreadcrumbStepper-step1Label`,`CSS`,`Step one label is showing`)
-        .click(`.qa-BreadcrumbStepper-FloatingActionButton-case0 > button`, `CSS`, `Click move to next step`)
-        .elementPresent(`.qa-BreadcrumbStepper-step2Label`,`CSS`,`Step two label is showing`)
+        .click(`[id=Next]`, `CSS`, `Click move to next step`)
         .click(`[name=exportName]`, `CSS`, `Click datapack name`)
-        .changeInput(`[name=exportName]`, `CSS`, dataProvider+` Happy Path Test Export Name`, `Change input to... `+dataProvider+` Happy Path Test Export Name`)
+        .changeInput(`[name=exportName]`, `CSS`, dataProvider+` Happy Path `, `Change input to... `+dataProvider+` Happy Path `)
         .click(`[name=datapackDescription]`, `CSS`, `Click datapack description`)
-        .changeInput(`[name=datapackDescription]`, `CSS`, dataProvider+` Happy Path Test Description`, `Change input to... `+dataProvider+` Happy Path Test Description`)
+        .changeInput(`[name=datapackDescription]`, `CSS`, dataProvider+` Happy Path `, `Change input to... `+dataProvider+` Happy Path `)
         .click(`[name=projectName]`, `CSS`, `Click datapack project`)
-        .changeInput(`[name=projectName]`, `CSS`, dataProvider+` Happy Path Test Project`, `Change input to... `+dataProvider+` Happy Path Test Project`)
-        .click(`[type=checkbox]:nth-of-type(`+providerNumber+`)`, `CSS`, `Click data provider checkbox`)
+        .changeInput(`[name=projectName]`, `CSS`, dataProvider+` Happy Path `, `Change input to... `+dataProvider+` Happy Path `)
+        .click(``+dataProvider+``, `NAME`, `Click element`)
+        .pause(5000)
+        .click(`[id=Next]`, `CSS`, `Click move to next step`)
         .pause(1000)
-        .click(`.qa-BreadcrumbStepper-FloatingActionButton-case1 > button`, `CSS`, `Click move next step`)
-        .elementPresent(`.qa-BreadcrumbStepper-step3Label`,`CSS`,`Step three label is showing`)
-        .elTextIs(`.qa-ExportSummary-tr-name > td:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Export Name`,`Confirm Export Name`)
-        .elTextIs(`.qa-ExportSummary-tr-description > td:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Description`,`Confirm Description` )
-        .elTextIs(`.qa-ExportSummary-tr-category > td:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Project`,`Confirm Project` )
-        .elTextIs(`.qa-ExportSummary-tr-layers > td:nth-of-type(2) > p`,`CSS`,dataProvider,`Confirm data provider` )
-        .click(`.qa-BreadcrumbStepper-NavigationArrowBack-previous-case2 > path`, `CSS`, `Click move back one step`)
-        .elementPresent(`.qa-BreadcrumbStepper-step2Label`,`CSS`,`Step two label is showing`)
-        .assert.value(`[name=exportName]`,dataProvider+` Happy Path Test Export Name`,`Confirm Export Name`)
-        .assert.value(`[name=datapackDescription]`,dataProvider+` Happy Path Test Description`,`Confirm Description` )
-        .assert.value(`[name=projectName]`,dataProvider+` Happy Path Test Project`,`Confirm Project` )
-        .pause(1000)
-        .click(`.qa-BreadcrumbStepper-FloatingActionButton-case1 > button`, `CSS`, `Click move next step`)
-        .elementPresent(`.qa-BreadcrumbStepper-step3Label`,`CSS`,`Step three label is showing`)
-        .elTextIs(`.qa-ExportSummary-tr-name > td:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Export Name`,`Confirm Export Name`)
-        .elTextIs(`.qa-ExportSummary-tr-description > td:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Description`,`Confirm Description` )
-        .elTextIs(`.qa-ExportSummary-tr-category > td:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Project`,`Confirm Project` )
-        .elTextIs(`.qa-ExportSummary-tr-layers > td:nth-of-type(2) > p`,`CSS`,dataProvider,`Confirm data provider` )
-        .click(`.qa-BreadcrumbStepper-FloatingActionButton-case2 > button`,`CSS`,`Click submit datapack`)
-        .elTextIs(`.qa-DataCartDetails-div-name > div > div:nth-of-type(2)`,`CSS`,dataProvider+` Happy Path Test Export Name`,`Confirm Datapack Name`)
+        .click(`[id=Next]`, `CSS`, `Click move to next step`)
         .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2)`, `CSS`, `SUBMITTED`, `El text is... "SUBMITTED"`)
         .pause(60000)
+        .pause(60000)
         .waitForElementPresent(`.qa-ProviderRow-Check-providerStatus`,240000)
-        .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2)`, `CSS`, `COMPLETED`, `El text is... "COMPLETED"`);
+        .elTextIs(`div > form > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2)`, `CSS`, `COMPLETED`, `El text is... "COMPLETED"`)
         switch(otherOptions){
             case "Run Export Again":
                 client

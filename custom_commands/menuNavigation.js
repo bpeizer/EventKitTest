@@ -3,6 +3,10 @@ exports.command = function(client,menuOption){
     require('./../common/components.js').bindComponents(client);
 
     switch(client,menuOption){
+        case "Dashboard":
+            client
+                .click('qa-Application-Link-dashboard','CSS','Click element')
+                .assert.urlContans("dashboard","expected dashboard in url");
         case "DataPack Library":
             client
                 .click('.qa-Application-Link-exports', 'CSS', 'Click element')

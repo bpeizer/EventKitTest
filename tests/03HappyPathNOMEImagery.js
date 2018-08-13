@@ -19,7 +19,7 @@
          .url(client.globals.EventKitBase)
          .loginStep(client,client.globals.GeoAxisUser, client.globals.GeoAxisPass)
          .menuNavigation(client,"Create DataPack")
-         .createDatapack(client,'Broadlands','1','NOME','Delete')
+         .createDatapack(client,'Delaplaine','1','NOME','Delete')
        .end();
 }
  };

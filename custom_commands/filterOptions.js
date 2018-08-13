@@ -43,5 +43,6 @@ exports.command = function(client,filterOption){
             break;
     }
     client.click(`.qa-FilterHeader-RaisedButton-apply`,`CSS`,`Click apply`);
+    client.çç
     return client;
 };

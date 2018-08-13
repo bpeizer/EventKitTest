@@ -19,6 +19,7 @@ var https = require('https');
          .url(client.globals.EventKitBase)
          .loginStep(client,client.globals.GeoAxisUser,client.globals.GeoAxisPass)
          .menuNavigation(client,"Logout")
+         .click(`.qa-ConfirmDialog-RaisedButton-ConfirmButton`,`CSS`,`Confirm Logout`)
          .back()
          .assert.urlContains("login","expected account in url")
          .url(client.globals.EventKitBase)
